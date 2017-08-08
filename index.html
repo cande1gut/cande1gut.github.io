@@ -1,103 +1,428 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-	<link rel="stylesheet" href="jquery/jquery.mobile-1.4.5.min.css">
-	<link rel="stylesheet" href="css/style.css">
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Web apps class</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/flexslider.css">
+<link rel="stylesheet" href="css/jquery.fancybox.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/animate.min.css">
+<link rel="stylesheet" href="css/font-icon.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
+
 <body>
+<!-- header section -->
+<section class="banner" role="banner">
+  <!--header navigation -->
+  <header id="header">
+    <div class="header-content clearfix"> <a class="logo" href="#"><img src="images/logo.png" alt=""></a>
+      <nav class="navigation" role="navigation">
+        <ul class="primary-nav">
+          <li><a href="#intro">Place</a></li>
+          <li><a href="#services">Basic Info</a></li>
+          <li><a href="#works">Web related tools</a></li>
+          <li><a href="#teams">Our Team</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="nav-toggle">Menu<span></span></a> </div>
+  </header>
+  <!--header navigation -->
+  <!-- banner text -->
+  <div class="container">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="banner-text text-center">
+        <h1>Web apps development class</h1>
+        <nav role="navigation"> <a href="#services" class="banner-btn"><img src="images/down-arrow.png" alt=""></a></nav>
+      </div>
+      <!-- banner text -->
+    </div>
+  </div>
+</section>
+<!-- header section -->
+<!-- about section -->
+<section id="intro" class="section intro no-padding">
+  <div class="container-fluid">
+    <div class="row no-gutter">
+      <div class="flexslider">
+        <ul class="slides">
+          <li>
+            <div class="col-md-6">
+              <div class="avatar"> <img src="images/sin.png" alt="" class="img-responsive"> </div>
+            </div>
+            <div class="col-md-6">
+              <blockquote>
+                <h1>Miguel Pérez</h1>
+                <p>From Rosario, Sinaloa</p>
+                <p>I'm here because I want to learn web development.</p>
+              </blockquote>
+            </div>
+          </li>
+          <li>
+            <div class="col-md-6">
+              <div class="avatar"> <img src="images/nay.png" alt="" class="img-responsive"> </div>
+            </div>
+            <div class="col-md-6">
+              <blockquote>
+                <h1>Candelario Gutiérrez</h1>
+                <p>From Tepic, Nayarit</p>
+                <p>I'm here because I want to learn all the rules and good practices to develop a good web project.</p>
+              </blockquote>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- about section -->
 
-	<!--Menu, botones de abajo-->
-	<div data-role="tabs" id="tabs">
-		<div id="footer" data-role="footer" style="overflow:hidden;" data-position="fixed" data-tap-toggle="false">
-			<div data-role="navbar">
-				<ul>
-					<li><a href="#one" class="ui-btn-active" data-ajax="true" data-icon="location">Mapa</a></li>
-					<li><a href="#container" data-ajax="false" data-icon="eye">Estadisticas</a></li>
-				</ul>
-			</div>
-		</div>
-		<div id="one" class="ui-body-d ui-content">
-			<div id="header">
-				<button class="ui-btn ui-shadow ui-corner-all fileinput-button" id="dButton">
-					<p class="ui-icon-action ui-btn-icon-top">Datos</p>
-					<input type="file" id="picker" onchange="load_file()" multiple data-role="none">
-				</button>
-				<button id="calendario" class="ui-btn ui-icon-calendar ui-btn-icon-top ui-corner-all ui-shadow ui-btn-inline">
-					<p>Mes</p>
-				</button>
-			</div>
+<!-- services section -->
+<section id="services" class="services service-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-6 services"> <span class="icon icon-briefcase"></span>
+        <div class="services-content">
+          <h5>Miguel Pérez</h5>
+          <p>Currently I'm not working but, I would like to work in Cisco as a network administrator.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 services"> <span class="icon icon-briefcase"></span>
+        <div class="services-content">
+          <h5>Candelario Gutiérrez</h5>
+          <p>Currently I'm working in a very early startup project as a mobile developer.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- services section -->
 
-			<!--Pop up que muestra meses-->
-			<div data-role="popup" id="popupCalendar" data-overlay-theme="a" data-theme="a" data-corners="false" data-tolerance="15,15">
-			    <a href="#" data-rel="back" class="ui-btn ui-btn-b ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
-			    <div id="calendarioContainer">
-						<fieldset class="ui-grid-b">
-							<div class="ui-block-a"><input id="bene" type="button" value="Ene"></div>
-							<div class="ui-block-b"><input id="bfeb" type="reset" value="Feb"></div>
-							<div class="ui-block-c"><input id="bmar" type="submit" value="Mar"></div>
-						</fieldset>
-						<fieldset class="ui-grid-b">
-							<div class="ui-block-a"><input id="babr" type="button" value="Abr"></div>
-							<div class="ui-block-b"><input id="bmay" type="reset" value="May"></div>
-							<div class="ui-block-c"><input id="bjun" type="submit" value="Jun"></div>
-						</fieldset>
-						<fieldset class="ui-grid-b">
-							<div class="ui-block-a"><input id="bjul" type="button" value="Jul"></div>
-							<div class="ui-block-b"><input id="bago" type="reset" value="Ago"></div>
-							<div class="ui-block-c"><input id="bsep" type="submit" value="Sep"></div>
-						</fieldset>
-						<fieldset class="ui-grid-b">
-							<div class="ui-block-a"><input id="boct" type="button" value="Oct"></div>
-							<div class="ui-block-b"><input id="bnov" type="reset" value="Nov"></div>
-							<div class="ui-block-c"><input id="bdic" type="submit" value="Dic"></div>
-						</fieldset>
-					</div>
-			</div>
-			<!--Fin de pop up que muestra meses-->
+<!-- work section -->
+<h1>Web related tools we like</h1>
+<section id="works" class="works section no-padding">
+  <div class="container-fluid">
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/phonegap.png" class="work-box"> <img src="images/phonegap.png" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><span class="icon icon-magnifying-glass"></span></p>
+          </div>
+        </div>
+        <!-- overlay -->
+        </a> </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/red.png" class="work-box"> <img src="images/red.png" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><span class="icon icon-magnifying-glass"></span></p>
+          </div>
+        </div>
+        <!-- overlay -->
+        </a> </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/react.png" class="work-box"> <img src="images/react.png" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><span class="icon icon-magnifying-glass"></span></p>
+          </div>
+        </div>
+        <!-- overlay -->
+        </a> </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/phaser.png" class="work-box"> <img src="images/phaser.png" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><span class="icon icon-magnifying-glass"></span></p>
+          </div>
+        </div>
+        <!-- overlay -->
+        </a> </div>
 
-			<!--Mapa de Google-->
-			<div id="map-canvas" style="width:100%; height:100%"></div>
-			<!--Fin de mapa de Google-->
-		</div>
-		<!--Container para mostrar camara de AR-->
-		<div id="container"></div>
-		<!--fin de container para mostrar camara de AR-->
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/node.png" class="work-box"> <img src="images/node.png" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><span class="icon icon-magnifying-glass"></span></p>
+          </div>
+        </div>
+        <!-- overlay -->
+        </a> </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/materialize.png" class="work-box"> <img src="images/materialize.png" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><span class="icon icon-magnifying-glass"></span></p>
+          </div>
+        </div>
+        <!-- overlay -->
+        </a> </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/f7.png" class="work-box"> <img src="images/f7.png" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><span class="icon icon-magnifying-glass"></span></p>
+          </div>
+        </div>
+        <!-- overlay -->
+        </a> </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/express.png" class="work-box"> <img src="images/express.png" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><span class="icon icon-magnifying-glass"></span></p>
+          </div>
+        </div>
+        <!-- overlay -->
+        </a> </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/django.png" class="work-box"> <img src="images/django.png" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><span class="icon icon-magnifying-glass"></span></p>
+          </div>
+        </div>
+        <!-- overlay -->
+        </a> </div>
+        <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/cordova.png" class="work-box"> <img src="images/cordova.png" alt="">
+          <div class="overlay">
+            <div class="overlay-caption">
+              <p><span class="icon icon-magnifying-glass"></span></p>
+            </div>
+          </div>
+          <!-- overlay -->
+          </a> </div>
+          <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/angular.svg" class="work-box"> <img src="images/angular.svg" alt="">
+            <div class="overlay">
+              <div class="overlay-caption">
+                <p><span class="icon icon-magnifying-glass"></span></p>
+              </div>
+            </div>
+            <!-- overlay -->
+            </a> </div>
+            <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/adobe.jpg" class="work-box"> <img src="images/adobe.jpg" alt="">
+              <div class="overlay">
+                <div class="overlay-caption">
+                  <p><span class="icon icon-magnifying-glass"></span></p>
+                </div>
+              </div>
+              <!-- overlay -->
+              </a> </div>
+              <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/vue.png" class="work-box"> <img src="images/vue.png" alt="">
+                <div class="overlay">
+                  <div class="overlay-caption">
+                    <p><span class="icon icon-magnifying-glass"></span></p>
+                  </div>
+                </div>
+                <!-- overlay -->
+                </a> </div>
+                <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/bootstrap.png" class="work-box"> <img src="images/bootstrap.png" alt="">
+                  <div class="overlay">
+                    <div class="overlay-caption">
+                      <p><span class="icon icon-magnifying-glass"></span></p>
+                    </div>
+                  </div>
+                  <!-- overlay -->
+                  </a> </div>
+                  <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/firebase.png" class="work-box"> <img src="images/firebase.png" alt="">
+                    <div class="overlay">
+                      <div class="overlay-caption">
+                        <p><span class="icon icon-magnifying-glass"></span></p>
+                      </div>
+                    </div>
+                    <!-- overlay -->
+                    </a> </div>
+                    <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/jquery.gif" class="work-box"> <img src="images/jquery.gif" alt="">
+                      <div class="overlay">
+                        <div class="overlay-caption">
+                          <p><span class="icon icon-magnifying-glass"></span></p>
+                        </div>
+                      </div>
+                      <!-- overlay -->
+                      </a> </div>
+                      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/spring.png" class="work-box"> <img src="images/spring.png" alt="">
+                        <div class="overlay">
+                          <div class="overlay-caption">
+                            <p><span class="icon icon-magnifying-glass"></span></p>
+                          </div>
+                        </div>
+                        <!-- overlay -->
+                        </a> </div>
+    </div>
+  </div>
+</section>
 
-		<!--Select box para seleccionar el tipo de regresion-->
-		<div id="modelo">
-			<select id="select-choice-mini" data-mini="true" data-inline="true">
-				<option value="lineal">Lineal</option>
-				<option value="exponencial">Exponencial</option>
-				<option value="logaritmica">Logaritmica</option>
-				<option value="potencia">Potencia</option>
-				<option value="polinomial">Polinomial</option>
-			</select>
-		</div>
-		<!--Fin de select box para seleccionar el tipo de regresion-->
+<hr>
 
-		<!--Pop up para mostrar grafica y funcion-->
-		<div data-role="popup" id="popupRegresion" data-overlay-theme="a" data-theme="a" data-corners="false" data-tolerance="15,15">
-			<a href="#" id="close" data-rel="back" class="ui-btn ui-btn-b ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a>
-			<div id="grafica"></div>
-			<h5 id="funcion"></h5>
-		</div>
-	</div>
-	<!--Fin de pop up para mostrar grafica y funcion-->
+<h1>Web related tools we don't like</h1>
+<section id="works" class="works section no-padding">
+  <div class="container-fluid">
+    <div class="row no-gutter">
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/tumblr.png" class="work-box"> <img src="images/tumblr.png" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><span class="icon icon-magnifying-glass"></span></p>
+          </div>
+        </div>
+        <!-- overlay -->
+        </a> </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/wix.jpg" class="work-box"> <img src="images/wix.jpg" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><span class="icon icon-magnifying-glass"></span></p>
+          </div>
+        </div>
+        <!-- overlay -->
+        </a> </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/tornado.png" class="work-box"> <img src="images/tornado.png" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><span class="icon icon-magnifying-glass"></span></p>
+          </div>
+        </div>
+        <!-- overlay -->
+        </a> </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/web2py.png" class="work-box"> <img src="images/web2py.png" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><span class="icon icon-magnifying-glass"></span></p>
+          </div>
+        </div>
+        <!-- overlay -->
+        </a> </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/rails.png" class="work-box"> <img src="images/rails.png" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><span class="icon icon-magnifying-glass"></span></p>
+          </div>
+        </div>
+        <!-- overlay -->
+        </a> </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/laravel.png" class="work-box"> <img src="images/laravel.png" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><span class="icon icon-magnifying-glass"></span></p>
+          </div>
+        </div>
+        <!-- overlay -->
+        </a> </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/php.png" class="work-box"> <img src="images/php.png" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><span class="icon icon-magnifying-glass"></span></p>
+          </div>
+        </div>
+        <!-- overlay -->
+        </a> </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/foundation.svg" class="work-box"> <img src="images/foundation.svg" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><span class="icon icon-magnifying-glass"></span></p>
+          </div>
+        </div>
+        <!-- overlay -->
+        </a> </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/drupal.png" class="work-box"> <img src="images/drupal.png" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><span class="icon icon-magnifying-glass"></span></p>
+          </div>
+        </div>
+        <!-- overlay -->
+        </a> </div>
+        <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/cake.png" class="work-box"> <img src="images/cake.png" alt="">
+          <div class="overlay">
+            <div class="overlay-caption">
+              <p><span class="icon icon-magnifying-glass"></span></p>
+            </div>
+          </div>
+          <!-- overlay -->
+          </a> </div>
+    </div>
+  </div>
+</section>
+<!-- work section -->
+<!-- our team section -->
+<section id="teams" class="section teams">
+  <div class="container">
+    <div class="row">
+      <!-- team member 1 -->
+      <div class="col-md-6 col-sm-6">
+        <div class="person"> <img src="images/miguel.jpg" alt="" class="img-responsive">
+          <div class="person-content">
+            <h4>Miguel Pérez</h4>
+          </div>
+        </div>
+      </div>
+      <!-- team member 1 -->
+      <!-- team member 2 -->
+      <div class="col-md-6 col-sm-6">
+        <div class="person"> <img src="images/cande.jpg" alt="" class="img-responsive">
+          <div class="person-content">
+            <h4>Candelario Gutiérrez</h4>
+          </div>
+        </div>
+      </div>
+      <!-- team member 2 -->
+    </div>
+  </div>
+</section>
+<!-- our team section -->
+<!-- Testimonials section -->
+<section id="testimonials" class="section testimonials no-padding">
+  <div class="container-fluid">
+    <div class="row no-gutter">
+      <div class="flexslider">
+        <ul class="slides">
+          <li>
+            <div class="col-md-12">
+              <blockquote>
+                <p>what do you want to learn in this class?</p>
+                <h1>"Learn a lot of good bunch of web design and programming stuff." </h1>
+              </blockquote>
+            </div>
+          </li>
+          <li>
+            <div class="col-md-12">
+              <blockquote>
+                <p>Do you agree the rules and grading policy?</p>
+                <h1>"We agree" </h1>
+              </blockquote>
+            </div>
+          </li>
+          <li>
+            <div class="col-md-12">
+              <blockquote>
+                <p>What topics are you familiar with?</p>
+                <h1>"Frontend, backend, web services, cloud computing, REST, web graphics, web security." </h1>
+              </blockquote>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Testimonials section -->
+<!-- Get a quote section -->
+<section id="contact" class="section quote">
+  <div class="container">
+    <div class="col-md-8 col-md-offset-2 text-center">
+      <h3>Click me (Firebase)</h3>
+      <a href="#" class="btn btn-large">Click here</a> </div>
+  </div>
+</section>
+<!-- Get a quote section -->
 
-	<!--Fin de menu, botones de abajo-->
-
-<script src="jquery/jquery-1.12.3.min.js"></script>
-<script src="jquery/jquery.mobile-1.4.5.min.js"></script>
-<script src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
-<script src="flot/jquery.flot.js"></script>
-<script src="js/gmaps.js"></script>
-<script src="js/ocrad.js"></script>
-<script src="js/regresion.js"></script>
-<script src="awe/awe-loader-min.js"></script>
-<script src="js/app.js"></script>
-
+</footer>
+<!-- Footer section -->
+<!-- JS FILES -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/retina.min.js"></script>
+<script src="js/modernizr.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
