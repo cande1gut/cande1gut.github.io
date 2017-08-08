@@ -477,6 +477,10 @@ ul li {
 	font-weight: 400;
 	margin-bottom: 20px;
 }
+.project{
+	width: 400px;
+	height: 250px;
+}
 .social-icons, .footer .footer-share {
 	margin-top: 30px;
 }
