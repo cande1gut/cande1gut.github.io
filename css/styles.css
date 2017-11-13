@@ -1,0 +1,154 @@
+/*
+   statusbar-overlay sets the background color for the overlay. Black text is the default when the statusbar plugin is not added. When the
+   statusbar plugin is added, it also adds default setting to make the content white via:
+
+       <preference name="StatusBarStyle" value="lightcontent"/>
+
+   Setting the background color to black will allow the default light content (white text/icons) to show on it. The statusbar plugin is included
+   in the config.xml file and will be added by the CLI when you build locally.
+
+   See https://github.com/apache/cordova-plugin-statusbar
+*/
+
+.statusbar-overlay {
+  background: #000000;
+}
+
+.navbar-fixed .page-content.with-subnavbar, .navbar-fixed .subnavbar~.page-content, .navbar-fixed .with-subnavbar .page-content {
+  padding-top: 50px !important;
+}
+
+.list-block {
+  margin-top: 0 !important;
+}
+
+.list-block ul:after, .list-block ul:before {
+  content: none;
+}
+
+.list-block ul:after {
+  margin-bottom: 10px;
+}
+
+.list-block ul>li.disabled {
+  display: none !important;
+}
+
+#plans h1, h3 {
+  text-align: center;
+}
+
+#save-button {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-radius: 0;
+}
+
+#chip-container {
+  position: absolute;
+  width: 100%;
+  margin-top: 2vh;
+  z-index: 10000000;
+  text-align: center;
+}
+
+.swiper-custom {
+  position: relative;
+  height: 100%;
+}
+
+.swiper-container {
+  height: 100%;
+}
+
+.swiper-slide {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-slide span {
+  text-align: center;
+  display: block;
+  font-size: 21px;
+  width: 70vw;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: none;
+  border: 1px solid #aaa;
+  border-radius: 0 0 0 0;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.swiper-pagination-bullet-active {
+  background: #007aff;
+  border-color: #007aff;
+}
+
+
+/*.card {
+  height: 85%;
+}*/
+
+.card-header {
+  text-align: center;
+}
+
+
+/*.card-content {
+  height: 35%;
+}*/
+
+.card-footer {
+  /*height: 15%;*/
+  padding: 0;
+}
+
+
+/*.meal-button {
+  width: 50%;
+  height: 100% !important;
+  line-height: 11vh !important;
+}*/
+
+.new-dish, .read-more {
+  height: 100% !important;
+  width: 50%;
+  box-shadow: 0px, 0px !important;
+}
+
+.new-dish {
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+.read-more {
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+}
+
+.swiper-pagination-bullet {
+  border-radius: 50%;
+}
+
+.dishTitle {
+  width: 100%;
+  color: black;
+}
+
+.dishImage {
+  width: 100%;
+  border-radius: 10%;
+}
+
+#dishInfo {
+  margin: 0 0;
+  height: 60vw;
+  overflow-y: scroll;
+}

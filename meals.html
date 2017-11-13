@@ -1,0 +1,195 @@
+<div class="pages navbar-fixed">
+  <div data-page="meals" class="page with-subnavbar">
+    <!-- Top Navbar-->
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="left">
+          <a href="#" class="back link">
+                      <i class="icon icon-back"></i>
+                      <span>Other Plan</span>
+                  </a>
+        </div>
+        <div class="subnavbar">
+          <!-- Buttons row as tabs controller in Subnavbar-->
+          <div class="buttons-row">
+            <!-- Link to 1st tab, active -->
+            <a href="#tab1" class="button active tab-link">Tab 1</a>
+            <!-- Link to 2nd tab -->
+            <a href="#tab2" class="button tab-link">Tab 2</a>
+            <!-- Link to 3rd tab -->
+            <a href="#tab3" class="button tab-link">Tab 3</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-content">
+      <div id="chip-container">
+        <div class="chip">
+          <div class="chip-label">Breakfast</div>
+        </div>
+      </div>
+      <div class="swiper-custom">
+        <div class="swiper-container">
+          <div class="swiper-pagination"></div>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" data-meal="breakfast">
+              <span class="meal-card">
+                <div class="card demo-card-header-pic">
+                  <div class="card-header color-white no-border">
+                    <h4 class="dishTitle" id="breakfastTitle"></h4>
+                  </div>
+                  <div class="card-content">
+                    <div class="card-content-inner">
+                      <img class="dishImage" src="" id="breakfastImage">
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <a href="#" class="new-dish new-dish1 meal-button button button-big button-raised">New Dish</a>
+                    <a href="#" class="read-more meal-button button button-big button-raised open-picker" data-picker=".picker-breakfast">Read more</a>
+                  </div>
+                </div>
+              </span>
+            </div>
+            <div class="swiper-slide" data-meal="lunch">
+              <span class="meal-card">
+                <div class="card demo-card-header-pic">
+                  <div class="card-header color-white no-border">
+                    <h4 class="dishTitle" id="lunchTitle"></h4>
+                  </div>
+                  <div class="card-content">
+                    <div class="card-content-inner">
+                      <img class="dishImage" src="" id="lunchImage">
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <a href="#" class="new-dish new-dish2 meal-button button button-big button-raised">New Dish</a>
+                    <a href="#" class="read-more meal-button button button-big button-raised open-picker" data-picker=".picker-lunch">Read more</a>
+                  </div>
+                </div>
+              </span>
+            </div>
+            <div class="swiper-slide" data-meal="collation1">
+              <span class="meal-card">
+                <div class="card demo-card-header-pic">
+                  <div class="card-header color-white no-border">
+                    <h4 class="dishTitle" id="collation1Title"></h4>
+                  </div>
+                  <div class="card-content">
+                    <div class="card-content-inner">
+                      <img class="dishImage" src="" id="collation1Image">
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <a href="#" class="new-dish new-dish3 meal-button button button-big button-raised">New Dish</a>
+                    <a href="#" class="read-more meal-button button button-big button-raised open-picker" data-picker=".picker-collation1">Read more</a>
+                  </div>
+                </div>
+              </span>
+            </div>
+            <div class="swiper-slide" data-meal="collation2">
+              <span class="meal-card">
+                <div class="card demo-card-header-pic">
+                  <div class="card-header color-white no-border">
+                    <h4 class="dishTitle" id="collation2Title"></h4>
+                  </div>
+                  <div class="card-content">
+                    <div class="card-content-inner">
+                      <img class="dishImage" src="" id="collation2Image">
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <a href="#" class="new-dish new-dish4 meal-button button button-big button-raised">New Dish</a>
+                    <a href="#" class="read-more meal-button button button-big button-raised open-picker" data-picker=".picker-collation2">Read more</a>
+                  </div>
+                </div>
+              </span>
+            </div>
+            <div class="swiper-slide" data-meal="dinner">
+              <span class="meal-card">
+                <div class="card demo-card-header-pic">
+                  <div class="card-header color-white no-border">
+                    <h4 class="dishTitle" id="dinnerTitle"></h4>
+                  </div>
+                  <div class="card-content">
+                    <div class="card-content-inner">
+                      <img class="dishImage" src="" id="dinnerImage">
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <a href="#" class="new-dish new-dish5 meal-button button button-big button-raised">New Dish</a>
+                    <a href="#" class="read-more meal-button button button-big button-raised open-picker" data-picker=".picker-dinner">Read more</a>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="picker-modal picker-breakfast">
+      <div class="toolbar">
+        <div class="toolbar-inner">
+          <div class="left"></div>
+          <div class="right"><a href="#" class="close-picker button button-big">Close</a></div>
+        </div>
+      </div>
+      <div class="picker-modal-inner">
+        <div class="content-block dishInfo" id="dishInfoBreakfast">
+        </div>
+      </div>
+    </div>
+
+    <div class="picker-modal picker-lunch">
+      <div class="toolbar">
+        <div class="toolbar-inner">
+          <div class="left"></div>
+          <div class="right"><a href="#" class="close-picker button button-big">Close</a></div>
+        </div>
+      </div>
+      <div class="picker-modal-inner">
+        <div class="content-block dishInfo" id="dishInfoLunch">
+        </div>
+      </div>
+    </div>
+
+    <div class="picker-modal picker-collation1">
+      <div class="toolbar">
+        <div class="toolbar-inner">
+          <div class="left"></div>
+          <div class="right"><a href="#" class="close-picker button button-big">Close</a></div>
+        </div>
+      </div>
+      <div class="picker-modal-inner">
+        <div class="content-block dishInfo" id="dishInfoCollation1">
+        </div>
+      </div>
+    </div>
+
+    <div class="picker-modal picker-collation2">
+      <div class="toolbar">
+        <div class="toolbar-inner">
+          <div class="left"></div>
+          <div class="right"><a href="#" class="close-picker button button-big">Close</a></div>
+        </div>
+      </div>
+      <div class="picker-modal-inner">
+        <div class="content-block dishInfo" id="dishInfoCollation2">
+        </div>
+      </div>
+    </div>
+
+    <div class="picker-modal picker-dinner">
+      <div class="toolbar">
+        <div class="toolbar-inner">
+          <div class="left"></div>
+          <div class="right"><a href="#" class="close-picker button button-big">Close</a></div>
+        </div>
+      </div>
+      <div class="picker-modal-inner">
+        <div class="content-block dishInfo" id="dishInfoDinner">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

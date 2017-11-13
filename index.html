@@ -1,452 +1,169 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" lang="">
-<!--<![endif]-->
-<head>
-<meta charset="utf-8">
-<meta name="description" content="">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Web apps class</title>
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/flexslider.css">
-<link rel="stylesheet" href="css/jquery.fancybox.css">
-<link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/responsive.css">
-<link rel="stylesheet" href="css/animate.min.css">
-<link rel="stylesheet" href="css/font-icon.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+<!DOCTYPE html>
+<html>
 
-  ga('create', 'UA-104186130-1', 'auto');
-  ga('send', 'pageview');
+  <head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
 
-</script>
-</head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
 
-<body>
-<!-- header section -->
-<section class="banner" role="banner">
-  <!--header navigation -->
-  <header id="header">
-    <div class="header-content clearfix"> <a class="logo" href="#"><img src="images/logo.png" alt=""></a>
-      <nav class="navigation" role="navigation">
-        <ul class="primary-nav">
-          <li><a href="#intro">Place</a></li>
-          <li><a href="#services">Basic Info</a></li>
-          <li><a href="#works">Web related tools</a></li>
-          <li><a href="#teams">Our Team</a></li>
-        </ul>
-      </nav>
-      <a href="#" class="nav-toggle">Menu<span></span></a> </div>
-  </header>
-  <!--header navigation -->
-  <!-- banner text -->
-  <div class="container">
-    <div class="col-md-10 col-md-offset-1">
-      <div class="banner-text text-center">
-        <h1>Web apps development class</h1>
-        <nav role="navigation"> <a href="#services" class="banner-btn"><img src="images/down-arrow.png" alt=""></a></nav>
-      </div>
-      <!-- banner text -->
-    </div>
-  </div>
-</section>
-<!-- header section -->
-<!-- about section -->
-<section id="intro" class="section intro no-padding">
-  <div class="container-fluid">
-    <div class="row no-gutter">
-      <div class="flexslider">
-        <ul class="slides">
-          <li>
-            <div class="col-md-6">
-              <div class="avatar"> <img src="images/sin.png" alt="" class="img-responsive"> </div>
-            </div>
-            <div class="col-md-6">
-              <blockquote>
-                <h1>Miguel Pérez</h1>
-                <p>From Rosario, Sinaloa</p>
-                <p>I'm here because I want to learn web development.</p>
-                <p>A project I'm proud of:</p>
-                <img src="images/sin.png" alt="" class="img-responsive">
-              </blockquote>
-            </div>
-          </li>
-          <li>
-            <div class="col-md-6">
-              <div class="avatar"> <img src="images/nay.png" alt="" class="img-responsive"> </div>
-            </div>
-            <div class="col-md-6">
-              <blockquote>
-                <h1>Candelario Gutiérrez</h1>
-                <p>From Tepic, Nayarit</p>
-                <p>I'm here because I want to learn all the rules and good practices to develop a good web project.</p>
-              </blockquote>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- about section -->
+    <!-- Your app title -->
+    <title>5 meals</title>
 
-<!-- services section -->
-<section id="services" class="services service-section">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 col-sm-6 services"> <span class="icon icon-briefcase"></span>
-        <div class="services-content">
-          <h5>Miguel Pérez</h5>
-          <p>Currently I'm not working but, I would like to work in Cisco as a network administrator.</p>
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-6 services"> <span class="icon icon-briefcase"></span>
-        <div class="services-content">
-          <h5>Candelario Gutiérrez</h5>
-          <p>Currently I'm working in a very early startup project as a mobile developer.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- services section -->
+    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
+     -->
 
-<!-- work section -->
-<h1>Web related tools we like</h1>
-<section id="works" class="works section no-padding">
-  <div class="container-fluid">
-      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/phonegap.png" class="work-box"> <img src="images/phonegap.png" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <p><span class="icon icon-magnifying-glass"></span></p>
-          </div>
-        </div>
-        <!-- overlay -->
-        </a> </div>
-      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/red.png" class="work-box"> <img src="images/red.png" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <p><span class="icon icon-magnifying-glass"></span></p>
-          </div>
-        </div>
-        <!-- overlay -->
-        </a> </div>
-      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/react.png" class="work-box"> <img src="images/react.png" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <p><span class="icon icon-magnifying-glass"></span></p>
-          </div>
-        </div>
-        <!-- overlay -->
-        </a> </div>
-      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/phaser.png" class="work-box"> <img src="images/phaser.png" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <p><span class="icon icon-magnifying-glass"></span></p>
-          </div>
-        </div>
-        <!-- overlay -->
-        </a> </div>
+    <link rel="stylesheet" href="lib/framework7/css/framework7.material.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.material.colors.min.css">
+    <link rel="stylesheet" href="css/framework7-icons.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
 
-      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/node.png" class="work-box"> <img src="images/node.png" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <p><span class="icon icon-magnifying-glass"></span></p>
-          </div>
-        </div>
-        <!-- overlay -->
-        </a> </div>
-      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/materialize.png" class="work-box"> <img src="images/materialize.png" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <p><span class="icon icon-magnifying-glass"></span></p>
-          </div>
-        </div>
-        <!-- overlay -->
-        </a> </div>
-      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/f7.png" class="work-box"> <img src="images/f7.png" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <p><span class="icon icon-magnifying-glass"></span></p>
-          </div>
-        </div>
-        <!-- overlay -->
-        </a> </div>
-      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/express.png" class="work-box"> <img src="images/express.png" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <p><span class="icon icon-magnifying-glass"></span></p>
-          </div>
-        </div>
-        <!-- overlay -->
-        </a> </div>
-      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/django.png" class="work-box"> <img src="images/django.png" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <p><span class="icon icon-magnifying-glass"></span></p>
-          </div>
-        </div>
-        <!-- overlay -->
-        </a> </div>
-        <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/cordova.png" class="work-box"> <img src="images/cordova.png" alt="">
-          <div class="overlay">
-            <div class="overlay-caption">
-              <p><span class="icon icon-magnifying-glass"></span></p>
-            </div>
-          </div>
-          <!-- overlay -->
-          </a> </div>
-          <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/angular.svg" class="work-box"> <img src="images/angular.svg" alt="">
-            <div class="overlay">
-              <div class="overlay-caption">
-                <p><span class="icon icon-magnifying-glass"></span></p>
+  <body class="theme-lightblue">
+    <div class="statusbar-overlay"></div>
+
+    <div class="views">
+      <div class="view view-main">
+        <div class="pages navbar-fixed">
+          <div data-page="index" class="page">
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="center">Meal Plans</div>
               </div>
             </div>
-            <!-- overlay -->
-            </a> </div>
-            <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/adobe.jpg" class="work-box"> <img src="images/adobe.jpg" alt="">
-              <div class="overlay">
-                <div class="overlay-caption">
-                  <p><span class="icon icon-magnifying-glass"></span></p>
-                </div>
+            <a href="#" class="floating-button open-popup" data-popup=".popup-data">
+              <i class="icon icon-plus"></i>
+            </a>
+            <div class="page-content">
+              <div class="list-block sortable">
+                <ul id="plans">
+                  <h1 class="startingText">No plans yet!</h1>
+                  <h3 class="startingText">Start adding some by clicking the plus icon at the bottom right</h3>
+                </ul>
               </div>
-              <!-- overlay -->
-              </a> </div>
-              <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/vue.png" class="work-box"> <img src="images/vue.png" alt="">
-                <div class="overlay">
-                  <div class="overlay-caption">
-                    <p><span class="icon icon-magnifying-glass"></span></p>
-                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup popup-data">
+      <div class="view navbar-fixed view-plan">
+        <div class="pages">
+          <div class="page">
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="right">
+                  <a href="#" class="button close-popup" id="cancelPopup">Cancel</a>
                 </div>
-                <!-- overlay -->
-                </a> </div>
-                <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/bootstrap.png" class="work-box"> <img src="images/bootstrap.png" alt="">
-                  <div class="overlay">
-                    <div class="overlay-caption">
-                      <p><span class="icon icon-magnifying-glass"></span></p>
-                    </div>
-                  </div>
-                  <!-- overlay -->
-                  </a> </div>
-                  <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/firebase.png" class="work-box"> <img src="images/firebase.png" alt="">
-                    <div class="overlay">
-                      <div class="overlay-caption">
-                        <p><span class="icon icon-magnifying-glass"></span></p>
-                      </div>
-                    </div>
-                    <!-- overlay -->
-                    </a> </div>
-                    <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/jquery.gif" class="work-box"> <img src="images/jquery.gif" alt="">
-                      <div class="overlay">
-                        <div class="overlay-caption">
-                          <p><span class="icon icon-magnifying-glass"></span></p>
+                <div class="center">New Meal Plan</div>
+              </div>
+            </div>
+            <div class="page-content">
+              <form id="newPlan" class="list-block inputs-list">
+                <ul>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="item-title floating-label">Title</div>
+                        <div class="item-input">
+                          <input id="planName" type="text" class="deleteData" name="planName" placeholder="Meal plan name" required>
                         </div>
                       </div>
-                      <!-- overlay -->
-                      </a> </div>
-                      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/spring.png" class="work-box"> <img src="images/spring.png" alt="">
-                        <div class="overlay">
-                          <div class="overlay-caption">
-                            <p><span class="icon icon-magnifying-glass"></span></p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="row no-gutter">
+                      <div class="col-auto">
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title floating-label">Weight (Kg.)</div>
+                            <div class="item-input">
+                              <input id="weight" type="number" class="deleteData" name="weight" placeholder="">
+                            </div>
                           </div>
                         </div>
-                        <!-- overlay -->
-                        </a> </div>
-    </div>
-  </div>
-</section>
-
-<hr>
-
-<h1>Web related tools we don't like</h1>
-<section id="works" class="works section no-padding">
-  <div class="container-fluid">
-    <div class="row no-gutter">
-      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/tumblr.png" class="work-box"> <img src="images/tumblr.png" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <p><span class="icon icon-magnifying-glass"></span></p>
-          </div>
-        </div>
-        <!-- overlay -->
-        </a> </div>
-      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/wix.jpg" class="work-box"> <img src="images/wix.jpg" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <p><span class="icon icon-magnifying-glass"></span></p>
-          </div>
-        </div>
-        <!-- overlay -->
-        </a> </div>
-      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/tornado.png" class="work-box"> <img src="images/tornado.png" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <p><span class="icon icon-magnifying-glass"></span></p>
-          </div>
-        </div>
-        <!-- overlay -->
-        </a> </div>
-      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/web2py.png" class="work-box"> <img src="images/web2py.png" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <p><span class="icon icon-magnifying-glass"></span></p>
-          </div>
-        </div>
-        <!-- overlay -->
-        </a> </div>
-      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/rails.png" class="work-box"> <img src="images/rails.png" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <p><span class="icon icon-magnifying-glass"></span></p>
-          </div>
-        </div>
-        <!-- overlay -->
-        </a> </div>
-      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/laravel.png" class="work-box"> <img src="images/laravel.png" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <p><span class="icon icon-magnifying-glass"></span></p>
-          </div>
-        </div>
-        <!-- overlay -->
-        </a> </div>
-      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/php.png" class="work-box"> <img src="images/php.png" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <p><span class="icon icon-magnifying-glass"></span></p>
-          </div>
-        </div>
-        <!-- overlay -->
-        </a> </div>
-      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/foundation.svg" class="work-box"> <img src="images/foundation.svg" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <p><span class="icon icon-magnifying-glass"></span></p>
-          </div>
-        </div>
-        <!-- overlay -->
-        </a> </div>
-      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/drupal.png" class="work-box"> <img src="images/drupal.png" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <p><span class="icon icon-magnifying-glass"></span></p>
-          </div>
-        </div>
-        <!-- overlay -->
-        </a> </div>
-        <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="images/cake.png" class="work-box"> <img src="images/cake.png" alt="">
-          <div class="overlay">
-            <div class="overlay-caption">
-              <p><span class="icon icon-magnifying-glass"></span></p>
+                      </div>
+                      <div class="col-auto">
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title floating-label">Height (cm.)</div>
+                            <div class="item-input">
+                              <input id="height" type="number" class="deleteData" name="height" placeholder="">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title floating-label">Age</div>
+                            <div class="item-input">
+                              <input id="age" type="number" class="deleteData" name="age" placeholder="">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" class="item-link smart-select" data-back-on-select="true">
+                      <select name="gender">
+                        <option value="" selected disabled></option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                      </select>
+                      <div class="item-content">
+                        <div class="item-inner">
+                          <div class="item-title">Gender</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="item-link smart-select" data-back-on-select="true">
+                      <select name="exercise">
+                        <option value="" selected disabled></option>
+                        <option value="none">A little or 0</option>
+                        <option value="light">Light (1-3 times a week)</option>
+                        <option value="moderate">Moderate (3-5 times a week)</option>
+                        <option value="strong">Strong (6-7 times a week)</option>
+                        <option value="very_strong">Very strong (2 times each day)</option>
+                      </select>
+                      <div class="item-content">
+                        <div class="item-inner">
+                          <div class="item-title">Exercise quantity</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+                <a href="#" id="save-button" class="button button-fill button-big">Save</a>
+              </form>
             </div>
-          </div>
-          <!-- overlay -->
-          </a> </div>
-    </div>
-  </div>
-</section>
-<!-- work section -->
-<!-- our team section -->
-<section id="teams" class="section teams">
-  <div class="container">
-    <div class="row">
-      <!-- team member 1 -->
-      <div class="col-md-6 col-sm-6">
-        <div class="person"> <img src="images/miguel.jpg" alt="" class="img-responsive">
-          <div class="person-content">
-            <h4>Miguel Pérez</h4>
-            <h5>Best project</h5>
-            <img class="project" src="images/space.jpg">
-            <h5>Video game</h5>
           </div>
         </div>
       </div>
-      <!-- team member 1 -->
-      <!-- team member 2 -->
-      <div class="col-md-6 col-sm-6">
-        <div class="person"> <img src="images/cande.jpg" alt="" class="img-responsive">
-          <div class="person-content">
-            <h4>Candelario Gutiérrez</h4>
-            <h5>Best project</h5>
-            <img class="project" src="images/commend.png">
-            <h5>Web recommendation app to organize events</h5>
-          </div>
-        </div>
-      </div>
-      <!-- team member 2 -->
     </div>
-  </div>
-</section>
-<!-- our team section -->
-<!-- Testimonials section -->
-<section id="testimonials" class="section testimonials no-padding">
-  <div class="container-fluid">
-    <div class="row no-gutter">
-      <div class="flexslider">
-        <ul class="slides">
-          <li>
-            <div class="col-md-12">
-              <blockquote>
-                <p>what do you want to learn in this class?</p>
-                <h1>"Learn a lot of good bunch of web design and programming stuff." </h1>
-              </blockquote>
-            </div>
-          </li>
-          <li>
-            <div class="col-md-12">
-              <blockquote>
-                <p>Do you agree the rules and grading policy?</p>
-                <h1>"We agree" </h1>
-              </blockquote>
-            </div>
-          </li>
-          <li>
-            <div class="col-md-12">
-              <blockquote>
-                <p>What topics are you familiar with?</p>
-                <h1>"Frontend, backend, web services, cloud computing, REST, web graphics, web security." </h1>
-              </blockquote>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Testimonials section -->
 
-</footer>
-<!-- Footer section -->
-<!-- JS FILES -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+  </body>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.flexslider-min.js"></script>
-<script src="js/jquery.fancybox.pack.js"></script>
-<script src="js/retina.min.js"></script>
-<script src="js/modernizr.js"></script>
-<script src="js/main.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  // TODO: Replace with your project's customized code snippet
-  var config = {
-    apiKey: "<API_KEY>",
-    authDomain: "<PROJECT_ID>.firebaseapp.com",
-    databaseURL: "https://webdev-93624.firebaseio.com/",
-    storageBucket: "<BUCKET>.appspot.com",
-    messagingSenderId: "<SENDER_ID>",
-  };
-  firebase.initializeApp(config);
-</script>
-
-</body>
 </html>
