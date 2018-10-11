@@ -1,24 +1,24 @@
 (function($) {
-  
+
   "use strict";
-  
+
   /* Page Loader active
   ========================================================*/
   $('#preloader').fadeOut();
 
-  /* 
+  /*
   CounterUp
   ========================================================================== */
   $('.counter').counterUp({
     time: 500
-  });  
-  
-  /* 
+  });
+
+  /*
   MixitUp
   ========================================================================== */
   $('#portfolio').mixItUp();
 
-  /* 
+  /*
    Screens Crouserl
    ========================================================================== */
     $('#carousel-screen').carousel({
@@ -29,10 +29,10 @@
       scale: 0.6,
       animationTime: 1000,
       showTime: 4000
-    });   
+    });
 
-  /* 
-   Clients Sponsor 
+  /*
+   Clients Sponsor
    ========================================================================== */
     var owl = $("#clients-scroller");
     owl.owlCarousel({
@@ -49,7 +49,7 @@
       itemsMobile : [479,1],
     });
 
-  /* Testimonials Carousel 
+  /* Testimonials Carousel
   ========================================================*/
   var owl = $("#testimonials");
     owl.owlCarousel({
@@ -65,9 +65,9 @@
       itemsTablet: [767,1],
       itemsTabletSmall: [480,1],
       itemsMobile : [479,1],
-    });   
+    });
 
-  /* 
+  /*
    Touch Owl Carousel
    ========================================================================== */
     var owl = $(".touch-slider");
@@ -102,7 +102,7 @@
         itemsMobile: [479, 1]
       });
 
-  /* 
+  /*
    Sticky Nav
    ========================================================================== */
     $(window).on('scroll', function() {
@@ -113,7 +113,7 @@
         }
     });
 
-  /* 
+  /*
  VIDEO POP-UP
  ========================================================================== */
   $('.video-popup').magnificPopup({
@@ -125,7 +125,7 @@
       fixedContentPos: false,
   });
 
-  /* 
+  /*
    Back Top Link
    ========================================================================== */
     var offset = 200;
@@ -146,14 +146,14 @@
       return false;
     })
 
-  /* 
+  /*
    One Page Navigation & wow js
    ========================================================================== */
     //Initiat WOW JS
     new WOW().init();
 
     $(window).on('load', function() {
-       
+
         $('body').scrollspy({
             target: '.navbar-collapse',
             offset: 195
@@ -162,8 +162,10 @@
         $(window).on('scroll', function() {
             if ($(window).scrollTop() > 100) {
                 $('.fixed-top').addClass('menu-bg');
+                $('.fixed-top').removeClass('menu-bg2');
             } else {
                 $('.fixed-top').removeClass('menu-bg');
+                $('.fixed-top').addClass('menu-bg2');
             }
         });
 
@@ -185,11 +187,10 @@
   $(window).resize(close_toggle);
 
   /* Nivo Lightbox
-  ========================================================*/   
+  ========================================================*/
    $('.lightbox').nivoLightbox({
     effect: 'fadeScale',
     keyboardNav: true,
   });
 
 }(jQuery));
-

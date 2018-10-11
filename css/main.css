@@ -481,8 +481,8 @@ button:focus {
   }
 }
 
-/* ========================================================================== 
-   Scroll To Up 
+/* ==========================================================================
+   Scroll To Up
    ========================================================================== */
 .back-to-top {
   display: none;
@@ -521,6 +521,14 @@ button:focus {
   background: -webkit-linear-gradient(left, #3c96ff 0%, #2dfbff 100%) !important;
   background: linear-gradient(to right, #3c96ff 0%, #2dfbff 100%) !important;
   box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  padding: 5px;
+}
+
+.menu-bg2 {
+  background: -webkit-linear-gradient(left, #3c96ff 0%, #2dfbff 100%) !important;
+  background: linear-gradient(to right, #3c96ff 0%, #2dfbff 100%) !important;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0);
   z-index: 9999;
   padding: 5px;
 }
@@ -733,7 +741,7 @@ button:focus {
 }
 
 /* ==========================================================================
-   About 
+   About
    ========================================================================== */
 #about {
   padding-bottom: 80px !important;
@@ -775,7 +783,7 @@ button:focus {
 }
 
 /* ==========================================================================
-   Clients 
+   Clients
    ========================================================================== */
 #clients {
   background: #ffffff;
@@ -1818,6 +1826,10 @@ button:focus {
   margin-left: 10px;
 }
 
+.header-button{
+  text-align: center;
+}
+
 .left, .right {
   cursor: pointer;
   font-size: 30px;
@@ -1825,7 +1837,7 @@ button:focus {
 }
 
 /* ==========================================================================
-   Blog 
+   Blog
    ========================================================================== */
 #blog .blog-item-wrapper {
   background: #fff;
@@ -1949,7 +1961,7 @@ textarea {
 
 #contact {
   background: #ffffff;
-  padding-bottom: 80px;
+  padding-bottom: 0px;
   position: relative;
   text-align: center;
 }
