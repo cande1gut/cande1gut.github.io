@@ -1,41 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!--
+Author: WebThemez
+Author URL: http://webthemez.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+Note: Please use our back link in your site (webthemez.com)
+-->
+<!DOCTYPE HTML>
+<!--[if lt IE 7 ]> <html lang="en" class="ie ie6"> <![endif]-->
+<!--[if IE 7 ]>	<html lang="en" class="ie ie7"> <![endif]-->
+<!--[if IE 8 ]>	<html lang="en" class="ie ie8"> <![endif]-->
+<!--[if IE 9 ]>	<html lang="en" class="ie ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-  <title>VR view</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<title>Salma's valentine</title>
+<meta name="description" content="">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:regular,bold">
+<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 
-<body>
-  <div id="error" class="dialog">
-    <div class="wrap">
-      <h1 class="title">Error</h1>
-      <p class="message">An unknown error occurred.</p>
-    </div>
-  </div>
+<body id="home">
+<div id="Header">
+<div class="wrapper">
+	<h1>Salma & Cande</h1>
+	</div>
+</div>
+<div id="Content" class="wrapper">
+<div class="countdown styled"></div>
+<div style="text-align:center;">
+	<h2 class="intro">Come back after the counter ends</h2>
+</div>
+</div>
 
-  <div id="play-overlay">
-    <img src="images/ic_play_arrow_white_24dp.svg" />
-  </div>
+<div id="overlay"></div>
 
-  <a id="watermark" href="http://g.co/vr/view" target="_blank">
-    <img src="images/ic_info_outline_black_24dp.svg" />
-  </a>
+<!--Scripts-->
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/Backstretch.js"></script>
+<script type="text/javascript" src="js/jquery.countdown.js"></script>
+<script type="text/javascript" src="js/global.js"></script>
 
-  <script>
-    WebVRConfig = {
-      BUFFER_SCALE: 0.5,
-      TOUCH_PANNER_DISABLED: false
-    };
-  </script>
-
-  <script src="build/three.js"></script>
-  <script src="build/embed.js"></script>
 </body>
-
 </html>
